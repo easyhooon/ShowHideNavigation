@@ -25,6 +25,7 @@ class HomeContainerFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         binding = FragmentManageBinding.inflate(inflater, container, false)
         return binding.root
     }

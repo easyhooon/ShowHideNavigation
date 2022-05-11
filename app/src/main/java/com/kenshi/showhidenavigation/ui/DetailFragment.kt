@@ -13,7 +13,7 @@ class DetailFragment: Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("DetailFragment", "onCreate")
+        Log.d("onCreate", "DetailFragment" )
     }
 
     override fun onCreateView(

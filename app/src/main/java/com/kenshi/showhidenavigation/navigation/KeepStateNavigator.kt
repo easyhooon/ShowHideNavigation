@@ -29,9 +29,9 @@ class KeepStateNavigator(
         var initialNavigate = false
         val currentFragment = manager.primaryNavigationFragment
 
-        // primaryNavigationFragment가 존재하면 기존 primaryFragment hide 처리 (재생성 방지)
+        // primaryNavigationFragment 가 존재하면 기존 primaryFragment hide 처리 (재생성 방지)
         if (currentFragment != null) {
-            transaction.hide(currentFragment)
+            transaction.detach(currentFragment)
         } else {
             initialNavigate = true
         }
@@ -45,7 +45,7 @@ class KeepStateNavigator(
             transaction.add(containerId, fragment, tag)
         } else {
             // 이미 생성되어 있던 fragment라면 show
-            transaction.show(fragment)
+            transaction.attach(fragment)
         }
 
         // destination fragment를 primary로 설정
