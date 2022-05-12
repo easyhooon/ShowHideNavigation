@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         )
         navController.navigatorProvider.addNavigator(navigator)
 
+        // navigation graph 세팅
         navController.setGraph(R.navigation.nav_graph)
 
         // 바텀 네비게이션 뷰와 navController 연결

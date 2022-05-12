@@ -6,20 +6,20 @@
     app:startDestination="@+id/navigation_home">
 
     <keep_state_fragment
-        android:id="@+id/navigation_home"
-        android:name="com.kenshi.showhidenavigation.ui.HomeFragment"
-        android:label="TodayFragment"
-        tools:layout="@layout/fragment_home"/>
-
-    <keep_state_fragment
         android:id="@+id/navigation_register"
         android:name="com.kenshi.showhidenavigation.ui.RegisterFragment"
-        android:label="ListFragment"
+        android:label="RegisterFragment"
         tools:layout="@layout/fragment_register"/>
 
     <keep_state_fragment
-        android:id="@+id/navigation_manage"
+        android:id="@+id/navigation_home"
         android:name="com.kenshi.showhidenavigation.ui.HomeContainerFragment"
+        android:label="HomeContainerFragment"
+        tools:layout="@layout/fragment_home_container"/>
+
+    <keep_state_fragment
+        android:id="@+id/navigation_manage"
+        android:name="com.kenshi.showhidenavigation.ui.ManageFragment"
         android:label="ManageFragment"
         tools:layout="@layout/fragment_manage"/>
 

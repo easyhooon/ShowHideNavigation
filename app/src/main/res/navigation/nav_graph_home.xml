@@ -8,7 +8,8 @@
     <fragment
         android:id="@+id/home"
         android:name="com.kenshi.showhidenavigation.ui.HomeFragment"
-        android:label="HomeFragment">
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_home_to_detail"
             app:destination="@id/detail" />
@@ -16,5 +17,6 @@
     <fragment
         android:id="@+id/detail"
         android:name="com.kenshi.showhidenavigation.ui.DetailFragment"
-        android:label="DetailFragment" />
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail"/>
 </navigation>

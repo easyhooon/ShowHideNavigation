@@ -7,12 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.kenshi.showhidenavigation.R
-import com.kenshi.showhidenavigation.databinding.FragmentManageBinding
+import com.kenshi.showhidenavigation.databinding.FragmentHomeContainerBinding
 
 
 class HomeContainerFragment : Fragment() {
 
-    lateinit var binding: FragmentManageBinding
+    lateinit var binding: FragmentHomeContainerBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +26,7 @@ class HomeContainerFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = FragmentManageBinding.inflate(inflater, container, false)
+        binding = FragmentHomeContainerBinding.inflate(inflater, container, false)
         return binding.root
     }
 }
