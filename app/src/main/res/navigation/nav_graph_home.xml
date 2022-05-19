@@ -14,6 +14,7 @@
             android:id="@+id/action_home_to_detail"
             app:destination="@id/detail" />
     </fragment>
+
     <fragment
         android:id="@+id/detail"
         android:name="com.kenshi.showhidenavigation.ui.DetailFragment"

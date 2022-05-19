@@ -6,18 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.kenshi.showhidenavigation.R
 import com.kenshi.showhidenavigation.databinding.FragmentHomeContainerBinding
 
 
+// 이 프래그먼트의 존재 이유
 class HomeContainerFragment : Fragment() {
 
     lateinit var binding: FragmentHomeContainerBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("onCreate", "HomeContainerFragment")
-
+        Log.d("onCreate", "HomeContainerFragment:${this.hashCode()}")
     }
 
     override fun onCreateView(

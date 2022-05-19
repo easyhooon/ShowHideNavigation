@@ -13,7 +13,7 @@ class DetailFragment: Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("onCreate", "DetailFragment" )
+        Log.d("onCreate", "DetailFragment:${this.hashCode()}")
     }
 
     override fun onCreateView(
@@ -23,5 +23,11 @@ class DetailFragment: Fragment() {
     ): View {
         binding = FragmentDetailBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    //호출되지 않음
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.d("onDestroyView", "DetailFragment is Destroyed")
     }
 }

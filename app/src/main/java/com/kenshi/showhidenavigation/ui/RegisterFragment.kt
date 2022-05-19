@@ -8,14 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.kenshi.showhidenavigation.databinding.FragmentRegisterBinding
 
-
 class RegisterFragment : Fragment() {
 
     lateinit var binding: FragmentRegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("onCreate", "RegisterFragment")
+        Log.d("onCreate", "RegisterFragment:${this.hashCode()}")
     }
 
     override fun onCreateView(
@@ -26,5 +25,10 @@ class RegisterFragment : Fragment() {
 
         binding = FragmentRegisterBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.d("onDestroyView", "RegisterFragment is Destroyed")
     }
 }
