@@ -1,4 +1,4 @@
-package com.kenshi.showhidenavigation.ui
+package com.kenshi.showhidenavigation.ui.home
 
 import android.os.Bundle
 import android.util.Log
@@ -9,25 +9,19 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.kenshi.showhidenavigation.R
 import com.kenshi.showhidenavigation.databinding.FragmentHomeBinding
+import com.kenshi.showhidenavigation.ui.base.BaseFragment
+import timber.log.Timber
 
-class HomeFragment : Fragment() {
-
-    lateinit var binding: FragmentHomeBinding
+class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("onCreate", "HomeFragment:${this.hashCode()}")
+        Timber.d("${this.hashCode()}")
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.handler = this
-        return binding.root
     }
 
     fun navigateToDetail(view: View) {

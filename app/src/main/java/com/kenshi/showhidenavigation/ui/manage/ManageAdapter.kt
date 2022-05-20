@@ -1,4 +1,4 @@
-package com.kenshi.showhidenavigation.ui
+package com.kenshi.showhidenavigation.ui.manage
 
 import android.view.LayoutInflater
 import android.view.View
